@@ -1,0 +1,14 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="row text-center">
+    <h1>Welcome to Ankh-Morpork!</h1>
+    <img src="~/Content/Images/CityImage.png" 
+         style="position:center; width:80%; height:80%; padding:10px 10px 10px 10px; border-radius:10px 10px; border: 6px solid black;margin-bottom:10px;"/>
+    <input class="btn-game btn-default btn-block" 
+           type="button" 
+           value="Start" 
+           onclick="location.href = '@Url.Action("Move","Home")'"/>
+</div>

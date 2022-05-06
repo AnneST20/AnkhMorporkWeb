@@ -1,0 +1,74 @@
+﻿@model AnkhMorporkWeb.Models.Player
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Player</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Money)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Money)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Fee)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Fee)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Beer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Beer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MeetingsWithThief)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MeetingsWithThief)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentGuild)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentGuild)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastMeeting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastMeeting)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrentMeeting)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrentMeeting)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,75 @@
+﻿@model AnkhMorporkWeb.Models.Player
+
+<div style="padding:10px 10px 10px 10px;">
+    <table>
+        <tr>
+            <td style="width: 40%;">
+                <img src="~/Content/Images/Beggar.jpg"
+                     style="position: center; width: 80%; height: 100%; padding: 10px 10px 10px 10px; border-radius: 10px 10px; border: 6px solid black; margin-bottom: 10px;" />
+            </td>
+            <td class="bottom">
+                <h2>
+                    @Model.LastMeeting
+                </h2> <br /><br />
+                <h1>
+                    @Model.CurrentGuild
+                </h1> <br />
+                <h2>
+                    @Model.CurrentMeeting
+                </h2> <br /><br /> <br />
+            </td>
+        </tr>
+        <tr>
+            <td width="40%">
+                <table style="background-color: black; color: honeydew; border-radius: 10px; width:80%;">
+                    <tr class="text-right">
+                        <td style="width:20%">
+                            @((int)Model.Money)
+                        </td>
+                        <td style="width:10%">
+                            <img src="~/Content/Images/GoldCoin.png" style="height:30px" />
+                        </td>
+                        <td style="width:20%">
+                            @((int)((Model.Money - (int)Model.Money)*100))
+                        </td>
+                        <td style="width:10%">
+                            <img src="~/Content/Images/SilverCoin.png" style="height:30px" />
+                        </td>
+                        <td style="width:20%">
+                            @Model.Beer
+                        </td>
+                        <td style="width:10%">
+                            <img src="~/Content/Images/Beer.png" style="height:30px" />
+                        </td>
+                        <td width="10%"></td>
+                    </tr>
+                </table>
+            </td>
+            <td>
+                <table width="100%">
+                    <tr>
+                        <td width="50%">
+                            <div class="row text-center" style="margin:0px 10px 0px 0px">
+                                <input class="btn-game btn-default btn-block"
+                                       type="button"
+                                       value="Skip"
+                                       onclick="location.href = '@Url.Action("Decline","Beggars")'"
+                                       style="padding:0; max-width:none; width:100%;" />
+                            </div>
+                        </td>
+                        <td>
+                            <div class="row text-center" style="margin:0px 0px 0px 10px">
+                                <input class="btn-game btn-default btn-block"
+                                       type="button"
+                                       value="Give"
+                                       onclick="location.href = '@Url.Action("Accept","Beggars", new {type = ViewBag.Type, beer = ViewBag.Beer})'"
+                                       style="padding:0; max-width:none; width:100%;" />
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+            </td>
+        </tr>
+    </table>
+</div>

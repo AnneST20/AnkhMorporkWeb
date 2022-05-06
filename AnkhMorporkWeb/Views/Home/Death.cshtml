@@ -1,0 +1,12 @@
+﻿@model AnkhMorporkWeb.Models.Player
+
+<div class="row text-center">
+    <h1>The end</h1>
+    <h2>@Model.LastMeeting</h2>
+    <img src="~/Content/Images/Cemetery.png"
+         style="position:center; width:80%; height:80%; padding:10px 10px 10px 10px; border-radius:10px 10px; border: 6px solid black;margin-bottom:10px;" />
+    <input class="btn-game btn-default btn-block"
+           type="button"
+           value="Main Menu"
+           onclick="location.href = '@Url.Action("Index","Home")'" />
+</div>
